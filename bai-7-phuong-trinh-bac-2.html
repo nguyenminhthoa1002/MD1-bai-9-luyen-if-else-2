@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính phương trình bậc 2: ax2+bx+c=0</h1>
+<input id="heSoa" type="text" placeholder="a=?">
+<input id="heSob" type="text" placeholder="b=?">
+<input id="heSoc" type="text" placeholder="c=?">
+<button value="Tính" onclick="tinhNghiem()">Tính</button>
+<p id="nghiem1"></p>
+<p id="nghiem2"></p>
+<script>
+    function tinhNghiem() {
+        let a = +document.getElementById('heSoa').value;
+        let b = +document.getElementById('heSob').value;
+        let c = +document.getElementById('heSoc').value;
+        let denta = b * b - 4 * a * c;
+        let nghiem1 = (-b + Math.sqrt(denta)) / 2 * a;
+        let nghiem2 = (-b - Math.sqrt(denta)) / 2 * a;
+        let nghiemkep = -b/2*a;
+        let nghiem = -c/b;
+        if (a !== 0) {
+            if (denta > 0) {
+                document.getElementById('nghiem1').innerHTML = 'Nghiệp 1 = ' + nghiem1;
+                document.getElementById('nghiem2').innerHTML = 'Nghiệm 2 = ' + nghiem2;
+            } else if (denta === 0) {
+                document.getElementById('nghiem1').innerHTML = 'Nghiệp kép = ' + nghiemkep;
+            } else if (denta < 0) {
+                document.getElementById('nghiem1').innerHTML = 'Phương trình vô nghiệm';
+            }
+        }else {
+            document.getElementById('nghiem1').innerHTML = 'Phương trnh có nghiệm x = ' + nghiem;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính diện tích tam giác vuông</h1>
+<input id="canhKe1" type="text" placeholder="Nhập cạnh kề 1">
+<input id="canhKe2" type="text" placeholder="Nhập cạnh kề 2">
+<button value="Tính" onclick="dienTichtamGiac()">Tính</button>
+<p id="ketQua"></p>
+<script>
+  function dienTichtamGiac(){
+    let a=+document.getElementById('canhKe1').value;
+    let b=+document.getElementById('canhKe2').value;
+    let result=(a*b)/2;
+    document.getElementById('ketQua').innerHTML='Diện tích tam giác vuông là: ' + result;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính giá điện</h1>
+<input type="text" id="soDien" placeholder="Nhập số điện (kWh)">
+<button value="Tính tiền" onclick="tinhTien()">Tính tiền</button>
+<p id="hienThi"></p>
+<script>
+  function tinhTien(){
+    let a=+document.getElementById('soDien').value;
+    let b= a-50;
+    let c= a-150;
+    let d= a-350;
+    let e= a-650;
+    let f= a-1050;
+    let tienDien1=50*1678+100*1734+200*2014+300*2536+400*2834+f*2927;
+      console.log(tienDien1);
+    let tienDien2=50*1678+100*1734+200*2014+300*2536+e*2834;
+      console.log(tienDien2);
+    let tiendien3=50*1678+100*1734+200*2014+d*2536;
+      console.log(tiendien3);
+    let tiendien4=50*1678+100*1734+c*2014;
+      console.log(tiendien4);
+    let tienDien5=50*1678+b*1734;
+      console.log(tienDien5);
+    let tienDien6=a*1678;
+      console.log(tienDien6);
+    if (a>=50){
+      if (b>50){
+        if (c>100){
+          if (d>200){
+            if (e>300){
+              if (f>0){
+                document.getElementById('hienThi').innerHTML="Số tiền điện là: "+ tienDien1;
+              } else {
+                  document.getElementById('hienThi').innerHTML="Số tiền điện là: "+ tienDien2;
+              }
+            } else {
+                document.getElementById('hienThi').innerHTML="Số tiền điện là: "+ tiendien3;
+            }
+          } else {
+              document.getElementById('hienThi').innerHTML="Số tiền điện là: "+ tiendien4;
+          }
+        }
+      } else {
+          document.getElementById('hienThi').innerHTML="Số tiền điện là: "+ tienDien5;
+      }
+    } else {
+        document.getElementById('hienThi').innerHTML="Số tiền điện là: "+ tienDien6;
+    }
+  }
+
+
+</script>
+</body>
+</html>

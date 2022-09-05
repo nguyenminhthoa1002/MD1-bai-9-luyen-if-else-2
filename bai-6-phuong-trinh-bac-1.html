@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính phương trình bậc 1: ax+b=0</h1>
+<input id="heSoa" type="text" placeholder="a=?">
+<input id="heSob" type="text" placeholder="b=?">
+<button value="Tính" onclick="tinhNghiem()">Tính</button>
+<p id="nghiem"></p>
+<script>
+  function tinhNghiem() {
+    let a = +document.getElementById('heSoa').value;
+    let b = +document.getElementById('heSob').value;
+    let nghiem = -b/a;
+    if (a !== 0) {
+        document.getElementById('nghiem').innerHTML='Phương trnh có nghiệm x = ' + nghiem;
+    } else if (b==0){
+        document.getElementById('nghiem').innerHTML='Phương trình vô số nghiệm';
+    } else {
+        document.getElementById('nghiem').innerHTML='Phương trình vô nghiệm';
+    }
+  }
+</script>
+</body>
+</html>

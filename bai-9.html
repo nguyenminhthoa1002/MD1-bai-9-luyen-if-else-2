@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Kiểm tra xem 3 số thực có phải là cạnh của một tam giác</h1>
+<input type="text" placeholder="a=?" id="canh1">
+<input type="text" placeholder="b=?" id="canh2">
+<input type="text" placeholder="c=?" id="canh3">
+<button value="Check" onclick="kiemTra()">Check</button>
+<p id="hienThi"></p>
+<script>
+  function kiemTra(){
+    let a=+document.getElementById('canh1').value;
+    let b=+document.getElementById('canh2').value;
+    let c=+document.getElementById('canh3').value;
+    if (a>0 &&b>0 && c>0 && a+b>c && b+c>a && a+c>b) {
+      document.getElementById('hienThi').innerHTML=a +','+ b +','+c +' là cạnh của một tam giác';
+    } else {
+      document.getElementById('hienThi').innerHTML=a +',' +b +','+c +' không là cạnh của một tam giác';
+    }
+  }
+</script>
+</body>
+</html>

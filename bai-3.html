@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính diện tích hình vuông</h1>
+<input id="canhGocvuong" type="text" placeholder="Nhập độ dài cạnh hình vuông">
+<button value="Tính" onclick="dienTich()">Tính</button>
+<p id="ketQua"></p>
+<script>
+  function dienTich(){
+    let a=+document.getElementById('canhGocvuong').value;
+    let result=a*a;
+    document.getElementById('ketQua').innerHTML='Diện tích hình vuông là: ' + result;
+  }
+</script>
+</body>
+</html>
